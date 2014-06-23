@@ -1055,7 +1055,7 @@ require_clang() {
     } >&3
     return 1
   fi
- 
+
   export CC="$clang"
 }
 
@@ -1403,7 +1403,7 @@ build_package_ez_setup() {
       echo "Installing setuptools from ${EZ_SETUP}..." 1>&2
       cat "${EZ_SETUP}"
     else
-      [ -n "${EZ_SETUP_URL}" ] || EZ_SETUP_URL="https://bootstrap.pypa.io/ez_setup.py"
+      [ -n "${EZ_SETUP_URL}" ] || EZ_SETUP_URL="http://bootstrap.pypa.io/ez_setup.py"
       echo "Installing setuptools from ${EZ_SETUP_URL}..." 1>&2
       http get "${EZ_SETUP_URL}"
     fi
