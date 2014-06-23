@@ -960,7 +960,7 @@ require_gcc() {
         else
           echo ": Install the official GCC compiler using these"
           echo -n "packages: "
-          colorize 4 "https://github.com/kennethreitz/osx-gcc-installer/downloads"
+          colorize 4 "http://github.com/kennethreitz/osx-gcc-installer/downloads"
         fi
 
         echo
@@ -1092,7 +1092,7 @@ use_homebrew_yaml() {
 
 configured_with_readline_dir() {
   # Mac OS X 10.4 has broken readline.
-  # https://github.com/yyuu/pyenv/issues/23
+  # http://github.com/yyuu/pyenv/issues/23
   local arg flag
   for arg in ${CONFIGURE_OPTS} ${PYTHON_CONFIGURE_OPTS} "${PYTHON_CONFIGURE_OPTS_ARRAY[@]}"; do
     if [[ "$arg" == "CPPFLAGS="* ]]; then
@@ -1280,7 +1280,7 @@ verify_python() {
       echo
       echo "The python-build could not find proper executable of Python after successful build."
       echo "Please open an issue for future improvements."
-      echo "https://github.com/yyuu/pyenv/issues"
+      echo "http://github.com/yyuu/pyenv/issues"
       return 1
     } >&3
   fi
@@ -1301,7 +1301,7 @@ verify_python_module() {
       echo ": The Python $1 extension was not compiled. Missing the ${2:-$1}?"
       echo
       echo "Please consult to the Wiki page to fix the problem."
-      echo "https://github.com/yyuu/pyenv/wiki/Common-build-problems"
+      echo "http://github.com/yyuu/pyenv/wiki/Common-build-problems"
       echo
       return 1
     } >&3
@@ -1421,7 +1421,7 @@ build_package_get_pip() {
       echo "Installing pip from ${GET_PIP}..." 1>&2
       cat "${GET_PIP}"
     else
-      [ -n "${GET_PIP_URL}" ] || GET_PIP_URL="https://bootstrap.pypa.io/get-pip.py"
+      [ -n "${GET_PIP_URL}" ] || GET_PIP_URL="http://bootstrap.pypa.io/get-pip.py"
       echo "Installing pip from ${GET_PIP_URL}..." 1>&2
       http get "${GET_PIP_URL}"
     fi
